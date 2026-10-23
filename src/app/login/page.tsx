@@ -31,7 +31,7 @@ export default function LoginPage() {
   const href = next ? `/auth/github?next=${encodeURIComponent(next)}` : "/auth/github";
 
   return (
-    <>
+    <div className="login-card">
       <h1>로그인</h1>
       {error && (
         <p role="alert" className="state error">
@@ -43,6 +43,6 @@ export default function LoginPage() {
       <a className="btn primary" href={href}>
         GitHub로 로그인
       </a>
-    </>
+    </div>
   );
 }
